@@ -1,9 +1,11 @@
 import 'dotenv/config';
 
 import { fastifyApp } from './lib/fastify';
+import { eligibleServices } from './routes/eligibleServices';
 import { healthcheck } from './routes/healthcheck';
 import { questions } from './routes/questions';
 
+fastifyApp.register(eligibleServices);
 fastifyApp.register(healthcheck);
 fastifyApp.register(questions);
 

@@ -1,0 +1,7 @@
+# Determines which services are eligible for the user given their answers
+POST {{$dotenv BACKEND_URL}}/eligibleServices
+Content-Type: application/json
+
+{
+  "answers": "Pflegegrad(3)-Pfleger(2)-Ort(zuhause)"
+}
