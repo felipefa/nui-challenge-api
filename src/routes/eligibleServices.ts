@@ -1,5 +1,6 @@
 import { FastifyInstance } from 'fastify';
 import { z } from 'zod';
+
 import { database } from '../lib/firebase';
 
 export async function eligibleServices(app: FastifyInstance) {
@@ -72,6 +73,7 @@ export async function eligibleServices(app: FastifyInstance) {
 
         return reply.send({ services });
       } catch (error) {
+        console.error(error);
         return reply.code(500).send('Internal server error');
       }
     }
