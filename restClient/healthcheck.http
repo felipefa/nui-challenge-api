@@ -1,0 +1,2 @@
+### API health check
+GET {{$dotenv BACKEND_URL}}/healthcheck
