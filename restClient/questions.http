@@ -1,2 +1,5 @@
 ### Get all questions
 GET {{$dotenv BACKEND_URL}}/questions
+
+### Get a question by key
+GET {{$dotenv BACKEND_URL}}/questions/Pfleger
