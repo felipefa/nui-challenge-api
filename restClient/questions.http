@@ -1,0 +1,2 @@
+### Get all questions
+GET {{$dotenv BACKEND_URL}}/questions

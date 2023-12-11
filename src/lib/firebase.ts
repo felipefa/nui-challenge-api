@@ -6,7 +6,8 @@ const serviceAccount = JSON.parse(
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
+  databaseURL: process.env.FIREBASE_DATABASE_URL
 });
 
 export const firebaseAdmin = admin;
-export const firestore = firebaseAdmin.firestore();
+export const database = firebaseAdmin.database();

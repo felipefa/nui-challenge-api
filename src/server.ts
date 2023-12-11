@@ -2,8 +2,10 @@ import 'dotenv/config';
 
 import { fastifyApp } from './lib/fastify';
 import { healthcheck } from './routes/healthcheck';
+import { questions } from './routes/questions';
 
 fastifyApp.register(healthcheck);
+fastifyApp.register(questions);
 
 const port = Number(process.env.PORT) || 3000;
 
